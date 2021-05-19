@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SM Paint</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="container">
+    <div class="header">
+      <span><img src="assets/images/icons/logo.png" alt="MS Paint Logo" srcset=""></span>
+      <span>untitled - Paint</span>
+    </div>
+    <div class="options">
+      <span data-option="save">Save</span>
+      <span data-option="exportImage">Export</span>
+      <span data-option="reset">Reset</span>
+
+    </div>
+    <div class="interaction-container">
+      <div class="tool-bar">
+        <div data-tool="eraser"></div>
+        <div data-tool="zoom"></div>
+        <div data-tool="pencil"></div>
+        <div data-tool="brush"></div>
+        <div data-tool="spray"></div>
+        <div data-tool="line"></div>
+        <div data-tool="box"></div>
+        <div data-tool="circle"></div>
+      </div>
+      <div class="drawing-canvas">
+        <canvas id="realCanvas" width="710px" height="430px"></canvas>
+        <canvas class="hidden" id="fakeCanvas" width="710px" height="430px"></canvas>
+      </div>
+    </div>
+    <div class="color-selection">
+      <div class="current-color"></div>
+      <div class="color-palette">
+        <div data-color="black"></div>
+        <div data-color="white"></div>
+        <div data-color="grey"></div>
+        <div data-color="red"></div>
+        <div data-color="blue"></div>
+        <div data-color="green"></div>
+        <div data-color="purple"></div>
+        <div data-color="yellow"></div>
+      </div>
+      <div class="opacity-selector">
+        <label for="opacity-slider">Color Opacity</label>
+        <input id="opacity-slider" type="range" min="0" max="1" step="0.1" value="1"/>
+      </div>
+    </div>
+    <div class="tool-tips">
+
+    </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
